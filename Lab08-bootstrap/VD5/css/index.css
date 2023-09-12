@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+}
+
+a{
+    text-decoration: none;
+    color: #2c2e53;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* header */
+.navbar{
+    margin-bottom: 0;
+}
