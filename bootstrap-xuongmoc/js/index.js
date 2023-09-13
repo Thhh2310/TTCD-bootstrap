@@ -103,4 +103,19 @@ $(document).ready(function(){
             price: priceInput
         }
     }
+
+    //load file html vào id contet
+    $("#content").load("tabs/dactrung.html");
+    $("#main ul li a").click(function(e){
+        //xoá class selected của thẻ a
+        $('a').removeClass('selected');
+        //lấy id của thẻ a đc click
+        id = e.target.id;
+        //add lại class selected vào thẻ a có id đc click
+        $("#"+id).addClass('selected');
+        //load lại content vào thẻ id container
+        $("#content").load("tabs/"+id+".html");
+    });
+
+
 });
