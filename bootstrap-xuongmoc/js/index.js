@@ -1,18 +1,18 @@
 $(document).ready(function(){
     var listProduct = [];
 
-    listProduct.push(addProduct("sp1.png","BÀN UỐNG NƯỚC",5,"(size vừa, nâu đậm)","8.999.000VND"));
-    listProduct.push(addProduct("sp2.png","BÀN UỐNG NƯỚC 2",4,"(size vừa, nâu đậm)","4.999.000VND"));
-    listProduct.push(addProduct("sp3.png","Kệ TV",1,"(size vừa, nâu đậm)","12.999.000VND"));
-    listProduct.push(addProduct("sp4.png","Kệ để đồ",5,"(size vừa, nâu đậm)","2.999.000VND"));
-    listProduct.push(addProduct("sp5.png","Sofa",2,"(size vừa, nâu đậm)","3.999.000VND"));
-    listProduct.push(addProduct("sp6.png","Sofa 2",1,"(size vừa, nâu đậm)","5.999.000VND"));
-    listProduct.push(addProduct("sp7.png","BÀN UỐNG NƯỚC 3",3,"(size vừa, nâu đậm)","7.999.000VND"));
-    listProduct.push(addProduct("sp8.png","BÀN UỐNG NƯỚC 4",5,"(size vừa, nâu đậm)","8.999.000VND"));
-    listProduct.push(addProduct("sp9.png","BÀN UỐNG NƯỚC 5",4,"(size vừa, nâu đậm)","14.999.000VND"));
-    listProduct.push(addProduct("sp10.png","Tủ sách",5,"(size vừa, nâu đậm)","82.999.000VND"));
-    listProduct.push(addProduct("sp11.png","Tủ sách 2",2,"(size vừa, nâu đậm)","18.999.000VND"));
-    listProduct.push(addProduct("sp12.png","Giá đồ",3,"(size vừa, nâu đậm)","77.999.000VND"));
+    listProduct.push(addProduct(["sp1.png","sp2.png","sp3.png","sp4.png","sp5.png","sp6.png","sp7.png","sp8.png","sp9.png","sp10.png","sp11.png","sp12.png"],"BÀN UỐNG NƯỚC",5,"(size vừa, nâu đậm)","8.999.000VND"));
+    listProduct.push(addProduct(["sp2.png","sp3.png","sp4.png","sp5.png","sp6.png","sp7.png","sp8.png","sp9.png","sp10.png","sp11.png","sp12.png","sp1.png"],"BÀN UỐNG NƯỚC 2",4,"(size vừa, nâu đậm)","4.999.000VND"));
+    listProduct.push(addProduct(["sp3.png","sp4.png","sp5.png","sp6.png","sp7.png","sp8.png","sp9.png","sp10.png","sp11.png","sp12.png","sp1.png","sp2.png"],"Kệ TV",1,"(size vừa, nâu đậm)","12.999.000VND"));
+    listProduct.push(addProduct(["sp4.png","sp5.png","sp6.png","sp7.png","sp8.png","sp9.png","sp10.png","sp11.png","sp12.png","sp1.png","sp2.png","sp3.png"],"Kệ để đồ",5,"(size vừa, nâu đậm)","2.999.000VND"));
+    listProduct.push(addProduct(["sp5.png","sp6.png","sp7.png","sp8.png","sp9.png","sp10.png","sp11.png","sp12.png","sp1.png","sp2.png","sp3.png","sp4.png"],"Sofa",2,"(size vừa, nâu đậm)","3.999.000VND"));
+    listProduct.push(addProduct(["sp6.png","sp7.png","sp8.png","sp9.png","sp10.png","sp11.png","sp12.png","sp1.png","sp2.png","sp3.png","sp4.png","sp5.png"],"Sofa 2",1,"(size vừa, nâu đậm)","5.999.000VND"));
+    listProduct.push(addProduct(["sp7.png","sp8.png","sp9.png","sp10.png","sp11.png","sp12.png","sp1.png","sp2.png","sp3.png","sp4.png","sp5.png","sp6.png"],"BÀN UỐNG NƯỚC 3",3,"(size vừa, nâu đậm)","7.999.000VND"));
+    listProduct.push(addProduct(["sp8.png","sp9.png","sp10.png","sp11.png","sp12.png","sp1.png","sp2.png","sp3.png","sp4.png","sp5.png","sp6.png","sp7.png"],"BÀN UỐNG NƯỚC 4",5,"(size vừa, nâu đậm)","8.999.000VND"));
+    listProduct.push(addProduct(["sp9.png","sp10.png","sp11.png","sp12.png","sp1.png","sp2.png","sp3.png","sp4.png","sp5.png","sp6.png","sp7.png","sp8.png"],"BÀN UỐNG NƯỚC 5",4,"(size vừa, nâu đậm)","14.999.000VND"));
+    listProduct.push(addProduct(["sp10.png","sp11.png","sp12.png","sp1.png","sp2.png","sp3.png","sp4.png","sp5.png","sp6.png","sp7.png","sp8.png","sp9.png"],"Tủ sách",5,"(size vừa, nâu đậm)","82.999.000VND"));
+    listProduct.push(addProduct(["sp11.png","sp12.png","sp1.png","sp2.png","sp3.png","sp4.png","sp5.png","sp6.png","sp7.png","sp8.png","sp9.png","sp10.png"],"Tủ sách 2",2,"(size vừa, nâu đậm)","18.999.000VND"));
+    listProduct.push(addProduct(["sp12.png","sp1.png","sp2.png","sp3.png","sp4.png","sp5.png","sp6.png","sp7.png","sp8.png","sp9.png","sp10.png","sp11.png"],"Giá đồ",3,"(size vừa, nâu đậm)","77.999.000VND"));
 
     console.log(listProduct);
     renderListProduct(listProduct);
@@ -76,9 +76,9 @@ $(document).ready(function(){
                 htmlStar +=`<i class="fa-solid fa-star text-gold"></i>`
             }
             htmlListProduct +=`
-            <div class="col-md-3 mb-3 col-sm-6 " data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <div class="col-md-3 mb-3 col-sm-6 product-item" data-bs-toggle="modal" data-bs-target="#exampleModal" data-id=${i}>
                 <div class="card">
-                    <img src="../images/xemtatca_sanpham/${listProduct[i].img}" alt="" class="card-img-top">
+                    <img src="../images/xemtatca_sanpham/${listProduct[i].img[0]}" alt="" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title text-blue text-center">${listProduct[i].name}</h5>
                         <span class="star text-center d-block">
@@ -91,6 +91,45 @@ $(document).ready(function(){
             </div>`;
         }
         $(".list-products .products .row").html(htmlListProduct);
+
+        $(".product-item").click(function(){
+            const id = $(this).data("id");
+
+            //Lấy thông tin
+            var htmlStar = "Đánh giá: ";
+            for (let j = 0; j < listProduct[id].rate; j++) {
+                htmlStar +=`<i class="fa-solid fa-star text-gold"></i>`;
+            }
+            $("#exampleModal .title").text(listProduct[id].name);
+            $("#exampleModal .rate").html(htmlStar);
+            $("#exampleModal .desc").text("Mô tả: " + listProduct[id].desc);
+            $("#exampleModal .price").text("Giá: " + listProduct[id].price);
+
+            //Lấy hình ảnh
+            $(".product-slide .slider-for").html("");
+            $(".product-slide .slider-nav").html("");
+            var htmlProductSlide = "";
+            var htmlProductSlide_Bottom = "";
+            for (let i = 0; i < listProduct[id].img.length; i++) {
+                htmlProductSlide +=`
+                <div class="img-box">
+                    <img src="../images/xemtatca_sanpham/${listProduct[id].img[i]}" alt=""
+                        class="w-100 object-fit-cover" style="height: 25rem;">
+                </div>`;
+
+                htmlProductSlide_Bottom +=`
+                <div class="img-box me-2">
+                    <img src="../images/xemtatca_sanpham/${listProduct[id].img[i]}" alt="" class="w-100">
+                </div>`;
+
+            }
+            $(".product-slide .slider-for").html(htmlProductSlide);
+            $(".product-slide .slider-nav").html(htmlProductSlide_Bottom);
+            $('.slider-for').slick('refresh');
+            $('.slider-nav').slick('refresh');
+
+
+        })
     }
 
     function addProduct(imgInput, nameInput, rateInput, descInput, priceInput){
